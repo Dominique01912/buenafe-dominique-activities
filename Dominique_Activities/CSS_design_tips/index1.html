@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Tips</title>
+<link rel="stylesheet" href="./css/web.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="tip-box" id="tipBox">
+        <!-- Tip content will appear here -->
+    </div>
+
+    <div class="navigation">
+        <button id="prevBtn" onclick="prevTip()" disabled>Back</button>
+        <button id="nextBtn" onclick="nextTip()">Next</button>
+    </div>
+</div>
+
+<script>
+    const tips = [
+        "01. <strong>Item for Goldlane:</strong> First is if you pick Irithel you neeed a buy boots, hasclaws, windtalker,berseker fury malefic gun, and windchant or rosegold. ",
+        "02. <strong>2nd if you pick granger:</strong>This is the build for you. First is we need a buy boots,hunter strike, sky piercer, malefic roar,blade of despair and that is build for irithel",
+        "03. <strong>3rd is Beatrix:</strong>First is we need a boots,malefic gun,blade of despair,hasclaws,sea halberd.That is my item for Beatrix.",
+        "04. <strong>4th is harith.:</strong> This is the best build for harith.First is wee need a magic boots, starlium scythe, feather of heaven,holy crystal,blood wings, and divine glaive.",
+        "05. <strong>And lastly is moscov:</strong>first is boots again,corrosion scythe,golden staff,demon hunter sword,rose gold, and malefic gun."
+        
+    ];
+
+    let currentTip = 0;
+
+    function displayTip() {
+        document.getElementById('tipBox').innerHTML = tips[currentTip];
+        document.getElementById('prevBtn').disabled = currentTip === 0;
+        document.getElementById('nextBtn').disabled = currentTip === tips.length - 1;
+    }
+
+    function nextTip() {
+        if (currentTip < tips.length - 1) {
+            currentTip++;
+            displayTip();
+        }
+    }
+
+    function prevTip() {
+        if (currentTip > 0) {
+            currentTip--;
+            displayTip();
+        }
+    }
+
+    // Initial display
+    displayTip();
+</script>
+
+</body>
+</html>

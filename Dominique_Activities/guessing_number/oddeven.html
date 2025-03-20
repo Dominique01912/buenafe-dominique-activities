@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center everything on the screen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+            background-color: #ffffff; /* White background for the container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
+        }
+
+        /* Label styling */
+        label {
+            font-size: 22px;
+            color: #333333; /* Dark gray color for the label */
+        }
+
+        /* Input and button styling */
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 2px solid #007BFF; /* Blue border for input and button */
+        }
+
+        /* Button color change on hover */
+        button {
+            background-color: #007BFF; /* Blue background for button */
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Make the result text large */
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333; /* Dark gray for the result */
+        }
+    </style>
+    <script src="./js/oddeven.js"></script>
+</head>
+<body>
+    <div class="container">
+        <label for="number">Enter a Number:</label><br>
+        <input type="number" id="number">
+        <button onclick="Oddeven()">Check</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
